@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Arrow, CV_HREF, EMAIL, Icon, ProjectCard, SectionHeader, StatusBadges } from "@/components/ui";
+import { Arrow, CV_HREF, EMAIL, Icon, ProjectCard, RowList, SectionHeader, StatusBadges } from "@/components/ui";
 import { formatDate, getPosts } from "@/lib/posts";
-import { ML_PROJECTS } from "@/lib/projects";
+import { ML_PROJECTS, OTHER_PROJECTS } from "@/lib/projects";
 import lassaSem from "@/assets/lassa-sem.jpg";
 import ctXray from "@/assets/ct-xray.jpg";
 import lassaSeries from "@/assets/lassa-series.png";
@@ -30,12 +30,6 @@ const SKILLS = [
   },
 ];
 
-const HIGHLIGHTS = [
-  { value: "MD", label: "Medical doctor" },
-  { value: "4", label: "ML projects" },
-  { value: "1", label: "Publication" },
-];
-
 export default function Home() {
   const posts = getPosts().slice(0, 3);
 
@@ -61,14 +55,6 @@ export default function Home() {
                 <Icon name="file" /> Download CV
               </a>
             </div>
-            <dl className="stats">
-              {HIGHLIGHTS.map(({ value, label }) => (
-                <div key={label}>
-                  <dt>{label}</dt>
-                  <dd>{value}</dd>
-                </div>
-              ))}
-            </dl>
           </div>
 
           <div className="hero-visual" aria-hidden="true">
@@ -127,6 +113,29 @@ export default function Home() {
               <ProjectCard key={project.href} project={project} />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Narrower column on purpose: breaks up the run of full-width sections. */}
+      <section className="section">
+        <div className="container container-narrow">
+          <SectionHeader eyebrow="More" title="Also built & published" />
+          <RowList
+            rows={[
+              ...OTHER_PROJECTS.map((p) => ({
+                title: p.title,
+                meta: `${p.category} · ${p.year}`,
+                href: p.href,
+                action: p.linkLabel,
+              })),
+              {
+                title: "Polygenic risk scores for cardiovascular disease",
+                meta: "Publication · The Egyptian Heart Journal · 2026",
+                href: "https://doi.org/10.1186/s43044-026-00746-3",
+                action: "Read paper",
+              },
+            ]}
+          />
         </div>
       </section>
 
