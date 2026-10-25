@@ -53,7 +53,9 @@ export function SiteFooter() {
               <a href={`mailto:${EMAIL}`}>Email</a>
             </li>
             <li>
-              <a href={CV_HREF}>CV (PDF)</a>
+              <a href={CV_HREF} target="_blank" rel="noopener">
+                CV
+              </a>
             </li>
           </ul>
         </div>

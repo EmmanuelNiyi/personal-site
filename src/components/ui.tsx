@@ -3,7 +3,8 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import type { Project } from "@/lib/projects";
 
-export const CV_HREF = "/Emmanuel-Niyi-Oriolowo-CV.pdf";
+// Hosted CV — update it on resumelink.co and the site always links to the latest version.
+export const CV_HREF = "https://resumelink.co/emmanuelniyi";
 export const EMAIL = "emmanuelniyioriolowo@gmail.com";
 export const GITHUB = "https://github.com/EmmanuelNiyi";
 export const LINKEDIN = "https://www.linkedin.com/in/emmanuel-niyi-229ab6176/";

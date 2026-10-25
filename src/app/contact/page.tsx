@@ -7,7 +7,7 @@ const LINKS = [
   { icon: "github" as const, title: "GitHub", body: "Repositories for every project on this site.", handle: "EmmanuelNiyi", href: GITHUB },
   { icon: "linkedin" as const, title: "LinkedIn", body: "Background, roles and clinical experience.", handle: "emmanuel-niyi", href: LINKEDIN },
   { icon: "database" as const, title: "Kaggle", body: "Published datasets, including the NCDC Lassa fever series.", handle: "emmanuelniyioriolowo", href: KAGGLE },
-  { icon: "file" as const, title: "Curriculum vitae", body: "Full record of clinical, engineering and research work.", handle: "PDF", href: CV_HREF },
+  { icon: "file" as const, title: "Curriculum vitae", body: "Full record of clinical, engineering and research work.", handle: "resumelink.co", href: CV_HREF },
 ];
 
 export default function ContactPage() {

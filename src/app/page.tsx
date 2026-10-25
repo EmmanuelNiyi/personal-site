@@ -51,8 +51,8 @@ export default function Home() {
               <Link className="btn btn-primary" href="/work">
                 View my work <Arrow />
               </Link>
-              <a className="btn btn-ghost" href={CV_HREF}>
-                <Icon name="file" /> Download CV
+              <a className="btn btn-ghost" href={CV_HREF} target="_blank" rel="noopener">
+                <Icon name="file" /> View CV
               </a>
             </div>
           </div>

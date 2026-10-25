@@ -30,7 +30,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <ThemeToggle />
-          <a className="btn btn-primary btn-sm nav-cv" href={CV_HREF}>
+          <a className="btn btn-primary btn-sm nav-cv" href={CV_HREF} target="_blank" rel="noopener">
             CV
           </a>
         </nav>
